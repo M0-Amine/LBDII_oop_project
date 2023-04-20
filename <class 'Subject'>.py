@@ -180,8 +180,7 @@ class Subject:
         """ Adds Student object to participants list AND calls add_subject """
         if not student in self.participants:
             self.participants.append(student)
-        if not self in student.subjects:
-            student.subjects.append(self)
+        student.add_subject(self)
         
     def add_attendance(self, total_minutes: int, late_minutes: list[int], day: str) -> None:
         """ Adds an Attendance object to each student in participants list """
