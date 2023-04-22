@@ -274,7 +274,7 @@ class Subject:
     def set_subject_name(self, new_name: str):
         self.name = new_name
     
-    def set_rates(self, *args: tuple[float]):
+    def set_rates(self, *args):
         for status, rate in enumerate(dic_delay.values(), args):
             self.rates[status] = rate
    
