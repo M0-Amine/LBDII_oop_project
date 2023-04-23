@@ -1,0 +1,129 @@
+[
+    {
+        "name": "Mohamed Amine SALIMI",
+        "gender": "Male",
+        "group": "A"
+    },
+
+    {
+        "name": "Mounia BADDOU",
+        "gender": "Female",
+        "group": "A"
+    }, 
+
+    {
+        "name": "Othmane AZOUBI",
+        "gender": "Male",
+        "group": "A"
+    },
+
+    {
+        "name": "Yassine BLALI",
+        "gender": "Male",
+        "group": "B"
+    },
+
+    {
+        "name": "Elghali BENJELLOUN",
+        "gender": "Male",
+        "group": "B"
+    },
+
+    {
+        "name": "Ikram BENFALLAH",
+        "gender": "Female",
+        "group": "B"
+    },
+
+    {
+        "name": "COSTUME",
+        "gender": "Male",
+        "group": "C"
+    },
+
+    {
+        "name": "Mouad ZAGOURA",
+        "gender": "Male",
+        "group": "C"
+    },
+    
+    {
+        "name": "LKHIBRA",
+        "gender": "Male",
+        "group": "C"
+    },
+    
+    {
+        "name": "Yasser BOUSSETA",
+        "gender": "Male",
+        "group": "D"
+    },
+    
+    {
+        "name": "Khaoula JELLAL",
+        "gender": "Female",
+        "group": "D"
+    },
+    
+    {
+        "name": "Malak KABLY",
+        "gender": "Female",
+        "group": "D"
+    },
+    
+    {
+        "name": "Ossama BENLADEN",
+        "gender": "Male",
+        "group": "E"
+    },
+    
+    {
+        "name": "Youness SOUCI",
+        "gender": "Male",
+        "group": "E"
+    },
+    
+    {
+        "name": "Zyad FREE",
+        "gender": "Male",
+        "group": "E"
+    },
+
+    {
+        "name": "Safae HAJJOUT",
+        "gender": "Female",
+        "group": "F"
+    },
+    
+    {
+        "name": "Fatimzahra FADEL",
+        "gender": "Female",
+        "group": "F"
+    },
+    
+    {
+        "name": "Samia LACHGAR",
+        "gender": "Male",
+        "group": "F"
+    },
+    
+    {
+        "name": "Jaafar YEFFOU",
+        "gender": "Male",
+        "group": "J"
+    },
+    
+    {
+        "name": "Kawtar LABZAE",
+        "gender": "Female",
+        "group": "J"
+    },
+    
+    {
+        "name": "Aymane BOURICHE",
+        "gender": "Male",
+        "group": "J"
+    }
+]
+
+
