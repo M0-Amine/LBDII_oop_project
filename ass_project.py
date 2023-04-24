@@ -372,7 +372,30 @@ class Subject:
 
     #print info
     def print_info(self):
-        pass
+        data = {
+            "ID": [x.get_id() for x in self.participants],
+            "Students": [x.get_student_name() for x in self.participants],
+            "Gender": [x.get_gender() for x in self.participants],
+            "Group": [x.get_group() for x in self.participants],
+        }
+        
+        for x in self.participants[0].assessments[self.get_id()]:
+            data[f"{x.get_type()} ({x.get_id()})"] = []
+
+            for std in self.participants:
+                val = list(filter(lambda asse: asse.get_id() == x.get_id() ,std.assessments[self.get_id()]))[0]
+                data[f"{x.get_type()} ({x.get_id()})"] = val.get_grade()
+
+
+        for x in self.participants[0].attendances[self.get_id()]:
+            data[f"{x.get_day()} ({x.get_id()})"] = []
+
+            for std in self.participants:
+                val = list(filter(lambda att: att.get_id() == x.get_id() ,std.attendances[self.get_id()]))[0].get_late_minutes()
+                data[f"{x.get_day()} ({x.get_id()})"] = f"{val}/{x.get_total_minutes()}"
+
+        df = pd.DataFrame(data)
+        print(df)
 
 # %%
 
