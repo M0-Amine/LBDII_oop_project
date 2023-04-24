@@ -5,7 +5,7 @@ The main idea is to model a school "like" system using OOP to build classes like
 
 This is a collective work of:
 
-Mohammed Amine SALIMI: GitHub: M0-Amine
+Mohamed Amine SALIMI: GitHub: M0-Amine 
 
 Othmane AZOUBI: GitHub: elEsquina
 

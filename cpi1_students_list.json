@@ -30,25 +30,25 @@
     },
 
     {
-        "name": "Ikram BENFALLAH",
+        "name": "Ikram BENFELLAH",
         "gender": "Female",
         "group": "B"
     },
 
     {
-        "name": "COSTUME",
+        "name": "Abdeljalil OTMAN",
         "gender": "Male",
         "group": "C"
     },
 
     {
-        "name": "Mouad ZAGOURA",
+        "name": "Mouad ELANSARI",
         "gender": "Male",
         "group": "C"
     },
     
     {
-        "name": "LKHIBRA",
+        "name": "Ahmed LAHLOU",
         "gender": "Male",
         "group": "C"
     },
@@ -72,19 +72,19 @@
     },
     
     {
-        "name": "Ossama BENLADEN",
+        "name": "Oussama LAAROUSSI",
         "gender": "Male",
         "group": "E"
     },
     
     {
-        "name": "Youness SOUCI",
+        "name": "Youness ANOUAR",
         "gender": "Male",
         "group": "E"
     },
     
     {
-        "name": "Zyad FREE",
+        "name": "Zyad FRI",
         "gender": "Male",
         "group": "E"
     },
@@ -96,14 +96,14 @@
     },
     
     {
-        "name": "Fatimzahra FADEL",
+        "name": "Fatima Zahra FADEL",
         "gender": "Female",
         "group": "F"
     },
     
     {
         "name": "Samia LACHGAR",
-        "gender": "Male",
+        "gender": "Female",
         "group": "F"
     },
     
@@ -120,7 +120,7 @@
     },
     
     {
-        "name": "Aymane BOURICHE",
+        "name": "Mohammed Aymane BOURICH",
         "gender": "Male",
         "group": "J"
     }
