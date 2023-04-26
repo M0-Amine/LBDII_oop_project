@@ -1,4 +1,3 @@
-# %%
 from typing import Union, Optional
 import pandas as pd
 
@@ -8,6 +7,8 @@ student_id: int
 assessment_type: str
 status: str
 rate: float
+
+
 
 class errormessages:
     #Attendance:
@@ -32,7 +33,6 @@ class errormessages:
 
 
 
-# %%
 # Basic configuations
 days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 dic_delay = {range(0, 1): "Present", range(1, 6): "Late", range(6, 180): "Absent"}
@@ -40,7 +40,7 @@ assessment_types = ["TD", "TP", "Quizz", "Exam"]
 genders = ["Male", "Female"]
 groups = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
 
-# %%
+
 # IDs generator
 def id_gen():
     id = 0
@@ -59,16 +59,14 @@ def get_subject_id_by_label(subject_name: str) -> int:
 
 Subjectify = lambda subject: get_subject_id_by_label(subject) if type(subject) is str else subject
 
-# %% [markdown]
-# ### Class Attendance
 
-# %%
+
 class Attendance:
     
     def __init__(self, total_minutes: int, late_minutes: int, day: str, chosen_id: int = None) -> None:        
         self.total_minutes = total_minutes 
 
-        self.set_late_minutes(total_minutes) 
+        self.set_total_minutes(total_minutes) 
         self.set_late_minutes(late_minutes) 
         self.set_day(day)
 
@@ -81,7 +79,6 @@ class Attendance:
             if self.late_minutes in range:
                 return dic_delay[range]
     
-    
     # Getters and Setters
     def get_total_minutes(self):
         return self.total_minutes
@@ -92,13 +89,10 @@ class Attendance:
     def get_day(self):
         return self.day
     
-    def get_status(self):
-        return self.status
-    
     def get_id(self):
         return self.id
     
-    def set_total_minutes(self, totalmin: int):
+    def set_total_minutes(self, totalmin: int) -> None:
         if totalmin < 0:
             raise ValueError(errormessages.neg_mins)
         
@@ -124,10 +118,6 @@ class Attendance:
         
         
 
-# %% [markdown]
-# ### Class Assessment
-
-# %%
 class Assessment:
     
     def __init__(self, assessment_type: str, grade: int, weight: float, chosen_id: int = None) -> None:              
@@ -147,6 +137,9 @@ class Assessment:
     def get_weight(self):
         return self.weight
     
+    def get_id(self) -> int:
+        return self.id
+    
     def set_weight(self, new_weight):
         if new_weight < 0:
             raise ValueError(errormessages.neg_weight)
@@ -164,15 +157,9 @@ class Assessment:
             raise ValueError(errormessages.bad_grade)
         
         self.grade = grade
-        
-    def get_id(self):
-        return self.id
     
 
-# %% [markdown]
-# ### Class Student
 
-# %%
 class Student:
     
     def __init__(self, name: str, gender: str, group: str) -> None:
@@ -205,7 +192,7 @@ class Student:
         
 
     def add_assessment(self, subject: Union[str, int], assessment_type: str, grade: int, chosen_id=None) -> None:
-        """ Adds an Assessment object to the student"""
+        """ Adds an Assessment object to the student """
 
         subject = Subjectify(subject)
         subject_obj = [sub for sub in self.subjects if sub.get_id() == subject][0]
@@ -321,10 +308,7 @@ class Student:
                 print(f"  - {attendance.day}: {attendance.total_minutes} minutes (Late: {attendance.late_minutes} minutes)")
                 
 
-# %% [markdown]
-# ### Class Subject
 
-# %%
 class Subject:
     
     def __init__(self, name: str, weights: Optional[dict[str, float]] = None) -> None:    
@@ -421,7 +405,6 @@ class Subject:
         return [student for student in self.participants if student.id == id][0]
     
 
-
     #print info
     def print_info(self):
         data = {
@@ -457,8 +440,6 @@ class Subject:
         df = pd.DataFrame(data)
         print(df)
 
-
-# %%
 english = Subject("English")
 import json 
 
@@ -473,7 +454,6 @@ with open("cpi1_students_list.json", "r") as f:
         student_count += 1
 
 
-
 english.add_assessment("Exam", [10 for i in range(student_count)] )
 english.add_assessment("TP", [10 for i in range(student_count)] )
 
@@ -481,6 +461,3 @@ english.add_attendance(180, [2 if bool(i % 2) else 0 for i in range(student_coun
 
 
 english.print_info()
-
-
-
